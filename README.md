@@ -1,3 +1,12 @@
 # Proyecto-avance
-Primer avance del proyecto (Creación de objetos)
-El avance de este proyecto esta basado en la utilización de clases y objectos para crear un programa que resuelva algun tipo de problema. La función principal de este programa es determinar que comidas y en cuantas cantidades las deseas. Es basicamente un mercado con diferentes pasillos, los cuales seran las clases. Y los objetos serián las diferentes opciones por pasillo yla cantidad. Cada pasillo tiene contenidos diferentes. El primero tiene frutas, el segundo tiene vegetales, y el tercero tiene carnes. Esencialmente es como un simulador de un mercado. Con este avance eso seria todo lo que hace, el usuario no puede escribir lo que quiere en la consola ya que esta automaticamente programado para enseñar lo que se escribio en el programa. Pero en un futuro se le puede agregar mas codigo que haga que el usuario si puede elegir su propia comida, y las cantidade desde la consola sin tener que editar el codigo. Incluso se pudiera programar para calcular el precio total de todo lo que el usuario ordeno. Pero en este avance solo se demuestra el uso de los objetos y las clases.
+Contexto:
+Este proyecto es un simulador de un mercado con diferentes pasillos. Cada pasillo es una sección diferentes que contiene diferentes productos. Estos siendo frutas, vegetales y carnes. 
+Funcionalidad:
+Por el momento el programa permite al usuario escoguer las frutas, los vegetales y las diferentes carnes y sus cantidades. El usurio puede escoguer sus alimentos preferidos del menu disponible. El programa todavia no puede sumar la cantidad exacta de productos escogidos, ni sus precios.
+Consideraciones:
+Este programa solo corre en la consola y esta hecho con c++. compilarlo y correrlo se utilizaria "g++ Main.cpp && ./a.out"
+Corrección:
+Los siguientes cambios fueron realizados:
+-Se cambio la base del main, es decir es bastante diferente al modelo anterior. 
+-Las clases ahora estan en archivos diferentes ya que han sido extedido bastante. A cada clase se le agrego una función nueva con el proposito de desplegar el menu de ese pasillo y dejar que el usuario escoga lo que quiere con su cantidad deseada. 
+-Incluso se agrego un compañante al usuario para que se sienta un poco mas intuitivo.

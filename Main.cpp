@@ -1,21 +1,26 @@
-#include <string>
-#include "Mercado.h"
-using namespace std;
-int main(){
-cout<<"Cual fruta te quieres llevar?"<<endl;//Manzana, Naranja, Banana
-Pasillo compras_1("Manzana", "1");
-    cout <<compras_1.get_Frutas()<<endl;
-    cout<<"Cuantas de esa fruta te quieres llevar?"<< endl;
-    cout<<compras_1.get_Cantidades()<< endl;
-cout<<"Cual vegetal te quieres llevar?"<< endl;// Cebolla, Apio, Zanahoria
-Pasillo2 compras_2("Zanahoria", "3");
-   cout <<compras_2.get_Vegetales()<<endl;
-   cout <<"Cuantos de ese vegetal te quieres llevar?"<< endl;
-   cout<<compras_2.get_Cantidades_2()<< endl;
-cout<<"Cual carne te quieres llevar?"<< endl;//Res, Pollo, Cerdo
-Pasillo3 compras_3("Pollo", "6");
-    cout <<compras_3.get_Carnes()<<endl;
-    cout <<"Cuantas onzas te quieres llevar?"<< endl;
-    cout <<compras_3.get_Cantidades_3()<< endl;
-return 0;
+#include <iostream>
+#include "frutas.h"
+#include "vegetales.h"
+#include "carne.h"
+
+int main()
+{   /* ---- Sección de Frutas ---- */
+    Pasillo fruta1("manzanas", 3);
+    std::cout << "Tu amigo que te acompaño al mercado se llevo " <<fruta1.get_cantidades() << " " << fruta1.get_frutas() << ". Que te llevaras tu de la sección de frutas?"<< " "<<std::endl;
+    fruta1.muestra_frutas();
+    
+    /* ---- Sección de Vegetales ---- */
+    Pasillo2 vegetales1("cebollas", 2);
+    std::cout << "Tu amigo no tomo nada de la sección de vegetales. Que te llevaras tu?"<< " "<<std::endl;
+    vegetales1.muestra_vegetales();
+
+    /* ---- Sección de Carnes ---- */
+    Pasillo3 carnes1("res", 8);
+    std::cout << "Tu amigo se llevo de la sección de carnes " <<carnes1.get_cantidades3() << " onzas de " << carnes1.get_carnes() << ". Que te llevaras tu?"<< " "<<std::endl;
+    carnes1.muestra_carnes();
+
+
+    return 0;
 }
+
+
