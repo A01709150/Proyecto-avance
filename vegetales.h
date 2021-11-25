@@ -1,6 +1,7 @@
+#include "mercado.h"
 #include <string>
 
-class Pasillo2
+class Pasillo2: public mercado
 {
 private:
     std::string vegetales;
@@ -35,10 +36,12 @@ void menu_vegetales()
     std::cout << "1. Zanahoria \n2. Cebolla \n3. Apio \n4. Lechuga\n0. Ir a la siguiente sección" << std::endl;
 }
 
+int sumavegetales=0;
+
 void Pasillo2::muestra_vegetales()
 {   
-    int op; 
-    int ap;
+     
+    suma=0;
     bool running = true;
 
     while (running)
@@ -51,17 +54,29 @@ void Pasillo2::muestra_vegetales()
         {
         case 1:
             std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "El usuario ha seleccionado " << ap << " zanahorias" << std::endl; break;
+            std::cout << "El usuario ha seleccionado " << ap << " zanahorias";
+            sumas();
+            sumavegetales=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
 
         case 2:
             std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "El usuario ha seleccionado " << ap << " cebollas" << std::endl; break;
+            std::cout << "El usuario ha seleccionado " << ap << " cebollas";
+            sumas();
+            sumavegetales=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         case 3:
             std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "El usuario ha seleccionado " << ap << " apio" << std::endl; break;
+            std::cout << "El usuario ha seleccionado " << ap << " apio";
+            sumas();
+            sumavegetales=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         case 4:
             std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "El usuario ha seleccionado " << ap << " lechuga" << std::endl; break;
+            std::cout << "El usuario ha seleccionado " << ap << " lechuga";
+            sumas();
+            sumavegetales=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         break;
         }
 

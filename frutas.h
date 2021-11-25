@@ -1,10 +1,12 @@
+#include "mercado.h"
 #include <string>
 
-class Pasillo
+class Pasillo: public mercado
 {
 private:
     std::string frutas;
     int cantidades;
+    
 
 public:
     Pasillo() : frutas(""), cantidades(0) { };
@@ -17,8 +19,10 @@ public:
     int get_cantidades();
     void set_cantidades(int );
 
+  
     // Funciones
     void muestra_frutas();
+    
 };
 
 /* ---- getters y setters ---- */
@@ -35,10 +39,13 @@ void menu_frutas()
     std::cout << "1. Manzanas \n2. Naranja \n3. Pera \n4. Banana \n0. Ir a la siguente sección" << std::endl;
 }
 
+
+int sumafrutas=0;
+
 void Pasillo::muestra_frutas()
 {   
-    int op; 
-    int ap;
+     
+    suma=0;
     bool running = true;
 
     while (running)
@@ -50,21 +57,37 @@ void Pasillo::muestra_frutas()
         switch (op)
         {
         case 1:
-            std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " manazanas" << std::endl; break;
+            std::cout << "Cuantas quieres? "; std::cin >> ap; 
+            std::cout << "Decidiste llevarte " << ap << " manazanas";
+            sumas();
+            sumafrutas=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
+            
             
         case 2:
             std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " naranjas" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " naranjas";
+            sumas();
+            sumafrutas=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
+            
         case 3:
             std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " peras" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " peras";
+            sumas();
+            sumafrutas=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         case 4:
              std::cout << "Cuantas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " bananas" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " bananas";
+            sumas();
+            sumafrutas=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         default: break;
         }
 
-       if (op==0) break; 
+       if (op==0)
+       
+       break; 
     }
 }

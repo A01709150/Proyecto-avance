@@ -1,6 +1,7 @@
+#include "mercado.h"
 #include <string>
 
-class Pasillo3
+class Pasillo3: public mercado
 {
 private:
     std::string carnes;
@@ -35,10 +36,12 @@ void menu_carnes()
     std::cout << "1. Cerdo \n2. Pollo \n3. Res \n4. Chivo \n0. Ir a la caja registradora" << std::endl;
 }
 
+int sumacarnes=0;
+
 void Pasillo3::muestra_carnes()
 {   
-    int op; 
-    int ap;
+     
+    
     bool running = true;
 
     while (running)
@@ -51,17 +54,29 @@ void Pasillo3::muestra_carnes()
         {
         case 1:
             std::cout << "Cuantas onzas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " onzas de cerdo" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " onzas de cerdo";
+            sumas();
+            sumacarnes=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
             
         case 2:
             std::cout << "Cuantas onzas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " onzas de pollo" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " onzas de pollo"; 
+            sumas();
+            sumacarnes=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         case 3:
             std::cout << "Cuantas onzas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " onzas de res" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " onzas de res"; 
+            sumas();
+            sumacarnes=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         case 4:
              std::cout << "Cuantas onzas quieres? "; std::cin >> ap;
-            std::cout << "Decidiste llevarte " << ap << " onzas de chivo" << std::endl; break;
+            std::cout << "Decidiste llevarte " << ap << " onzas de chivo"; 
+            sumas();
+            sumacarnes=suma;
+            std::cout << ". Tienes un total de: " << suma << std::endl; break;
         default: break;
         }
 
